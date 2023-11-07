@@ -1,0 +1,57 @@
+#include <stdio.h> 
+#include <string>
+#include <iostream>
+#include <iomanip>
+using namespace std;//it is used to give direction to the coding we can either use this operator or use "std::" in the b lock begore every cin, cout and endl.
+// B: Using the docstring, document/identity the objective of thisprogram, the file name, the author, version and date.
+//**********
+/**
+ * The profitCount.cpp program implements the following applications:
+ * programming exercise profitCount takes total adult meal and child meal ordered as input and outputs the total profit made by the NorthLake Campus Students’ Club.
+ * 
+ * @filename: profitCount.cpp
+ * @author: Anup Poudel 
+ * @version 1.0
+ * @since 10/28/2023
+ */
+ /********
+
+
+int main(){
+    float adult_profit, child_profit, total_price, totalChildMeal, totalAdultMeal, total_adult_price, total_child_price, totalProfit;
+    const float to_make_adult_meal = 5.35;
+    const float to_make_child_meal = 4.10;
+    const float adult_meal = 7.00;
+    const float child_meal = 4.00;
+    
+    cout << "Following program takes total adult meal and child meal ordered as input and outputs the total profit:" <<endl;
+    
+    cout << "Enter number of adut meal ordered: ";
+    cin >> totalAdultMeal;
+    total_adult_price = totalAdultMeal * adult_meal; 
+    cout << "total meal for adult: "<<total_adult_price <<endl << endl;
+    
+    cout << "Enter number of child meals ordered: ";
+    cin >> totalChildMeal;
+    total_child_price = totalChildMeal * child_meal;
+    cout << "total meal for child: "<<total_child_price <<endl <<endl;
+    
+    total_price = total_adult_price + total_child_price;
+    cout << "total profit for all meal is: " << total_price <<endl;
+    
+    adult_profit = total_adult_price - (totalAdultMeal * to_make_adult_meal);
+    cout << "total adult profit is: " << adult_profit << endl;
+    
+    child_profit = total_child_price - (totalChildMeal * to_make_child_meal);
+    cout << "total child profit is: " << child_profit << endl <<endl;
+    
+    totalProfit = adult_profit + child_profit;
+    cout << "Overall profit for Club is: $" << totalProfit <<endl<<endl;
+    
+    cout << "From " <<totalAdultMeal << " adult meal and "<< totalChildMeal << " child meal ordered. \nTotal profit NorthLake Campus Students’ Club made is $" <<totalProfit<< "." << endl;
+    
+    
+    
+    return 0;
+    
+}
